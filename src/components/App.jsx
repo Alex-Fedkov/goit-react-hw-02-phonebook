@@ -40,7 +40,7 @@ class App extends Component {
     }
 
     const id = nanoid();
-    contacts.push({ id, name, number });
+    this.setState(prevState => ({ contacts: [...prevState.contacts, { id, name, number }] }));
     this.setState({ name: "", number: "" });
   }
 
@@ -67,4 +67,3 @@ class App extends Component {
 };
 
 export default App;
-

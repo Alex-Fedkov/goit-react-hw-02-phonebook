@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { 
   FindContact,
   Input
@@ -10,6 +11,11 @@ const Filter = ({ filter, onChange }) => {
       <Input name="filter" value={filter} onChange={onChange} />
     </div>
   );
+}
+
+Filter.prototype = {
+  filter: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 }
 
 export default Filter;
