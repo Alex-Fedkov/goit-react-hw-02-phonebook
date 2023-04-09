@@ -36,9 +36,9 @@ const ContactForm = ({ name = "", number = "", onChange, onSubmit }) => {
   );
 }
 
-ContactForm.prototype = {
+ContactForm.propTypes = {
   name: PropTypes.string.isRequired,
-  number: PropTypes.number.isRequired,
+  number: PropTypes.string.isRequired,
   onSubmit: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
 }

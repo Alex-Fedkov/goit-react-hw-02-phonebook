@@ -18,9 +18,9 @@ const ContactItem = ({ name, number, onDelete}) => {
   )
 }
 
-ContactItem.prototype = {
+ContactItem.propTypes = {
   name: PropTypes.string.isRequired,
-  number: PropTypes.number.isRequired,
+  number: PropTypes.string.isRequired,
   onDelete: PropTypes.func.isRequired,
 }
 
